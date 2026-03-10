@@ -1,0 +1,20 @@
+[package]
+name = "escrow"
+version = "0.1.0"
+description = "Solana escrow program for trustless P2P token exchanges"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "escrow"
+
+[features]
+default = []
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+
+[dependencies]
+anchor-lang = "0.29.0"
+anchor-spl = "0.29.0"
